@@ -1,0 +1,709 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ส่วนหลักของเว็บไซต์ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+/* กล่องเนื้อหา */
+.hero-content {
+    max-width: 800px;
+}
+
+
+/* ชื่อ GARDEN AI */
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    color: #234a8a;
+    margin-bottom: 10px;
+}
+
+
+/* หัวข้อ */
+.hero h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+
+/* คำอธิบาย */
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* ปุ่ม */
+.start-button {
+    display: inline-block;
+    padding: 16px 35px;
+    background: #234a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปวาง */
+.start-button:hover {
+    background: #163565;
+    transform: translateY(-3px);
+}
+/* ========================================
+   KRAM AI - Result Card
+======================================== */
+
+
+.result-card {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 550px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+
+.result-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+.result-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.result-card h2 {
+    font-size: 28px;
+    margin: 10px 0 20px;
+}
+
+
+.confidence-number {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.confidence-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.result-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+
+.result-card h4 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+
+.result-card p {
+    line-height: 1.8;
+}
+
+
+.result-card small {
+    display: block;
+    margin-top: 20px;
+    color: #777;
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------
+   ระดับความมั่นใจ
+---------------------------------------- */
+
+
+.confidence-high {
+    border: 4px solid #2e8b57;
+}
+
+
+.confidence-high .confidence-number {
+    color: #2e8b57;
+}
+
+
+.confidence-high .confidence-text {
+    color: #2e8b57;
+}
+
+
+.confidence-medium {
+    border: 4px solid #e0a800;
+}
+
+
+.confidence-medium .confidence-number {
+    color: #e0a800;
+}
+
+
+.confidence-medium .confidence-text {
+    color: #e0a800;
+}
+
+
+.confidence-low {
+    border: 4px solid #d9534f;
+}
+
+
+.confidence-low .confidence-number {
+    color: #d9534f;
+}
+
+
+.confidence-low .confidence-text {
+    color: #d9534f;
+}
+/* ========================================
+   GARDEN AI - History
+======================================== */
+
+
+.history-button,
+.clear-button {
+    margin: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.history-button {
+    background: #234a8a;
+    color: white;
+}
+
+
+.clear-button {
+    background: #eee;
+    color: #555;
+}
+
+
+.history-card {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.history-card h3 {
+    margin-bottom: 20px;
+}
+
+
+.history-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: #f5f7fb;
+    border-left: 5px solid #2e8b57;
+}
+
+
+.history-item p {
+    margin: 6px 0;
+}
+
+
+.history-item small {
+    color: #777;
+}
+
+
+/* ========================================
+   GARDEN AI - Statistics Dashboard
+======================================== */
+
+
+.statistics-card {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.statistics-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+.stat-box {
+    padding: 20px 10px;
+    border-radius: 15px;
+    background: #f5f7fb;
+    text-align: center;
+}
+
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.stat-box.Xishuangbanna {
+    border-left: 5px solid #2e8b57;
+}
+
+
+.stat-box.Garden Gardenia {
+    border-left: 5px solid #e0a800;
+}
+
+
+.stat-box.Foxtail palm {
+    border-left: 5px solid #d9534f;
+}
+.stat-box.Yellow elder {
+    border-left: 5px solid #2e8b57;
+}
+
+
+/* ========================================
+   GARDEN AI - Report Button
+======================================== */
+
+
+.report-button {
+
+
+    margin: 15px;
+
+
+    padding: 14px 25px;
+
+
+    border: none;
+
+
+    border-radius: 12px;
+
+
+    background: #2e8b57;
+
+
+    color: white;
+
+
+    font-size: 16px;
+
+
+    font-weight: bold;
+
+
+    cursor: pointer;
+
+
+    transition: 0.3s;
+
+
+}
+
+
+.report-button:hover {
+
+
+    transform:
+    translateY(-2px);
+
+
+    opacity:
+    0.9;
+
+
+}
+
+
+/* ========================================
+   GARDEN AI CHAT
+======================================== */
+
+
+.chat-page {
+
+
+    min-height: 100vh;
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+    align-items: center;
+
+
+    padding: 30px 15px;
+
+
+}
+
+
+.chat-container {
+
+
+    width: 100%;
+
+
+    max-width: 800px;
+
+
+    background: white;
+
+
+    border-radius: 20px;
+
+
+    box-shadow:
+        0 10px 40px
+        rgba(0, 0, 0, 0.10);
+
+
+    overflow: hidden;
+
+
+}
+
+
+.chat-header {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    gap: 15px;
+
+
+    padding: 25px;
+
+
+    background: #234a8a;
+
+
+    color: white;
+
+
+}
+
+
+.chat-logo {
+
+
+    font-size: 45px;
+
+
+}
+
+
+.chat-header h1 {
+
+
+    margin: 0;
+
+
+    font-size: 28px;
+
+
+}
+
+
+.chat-header p {
+
+
+    margin: 5px 0 0;
+
+
+    opacity: 0.9;
+
+
+}
+
+
+.chat-messages {
+
+
+    height: 450px;
+
+
+    overflow-y: auto;
+
+
+    padding: 25px;
+
+
+}
+
+
+.message {
+
+
+    display: flex;
+
+
+    gap: 10px;
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+.message-icon {
+
+
+    font-size: 25px;
+
+
+    flex-shrink: 0;
+
+
+}
+
+
+.message-text {
+
+
+    padding: 13px 17px;
+
+
+    border-radius: 15px;
+
+
+    line-height: 1.7;
+
+
+    max-width: 80%;
+
+
+}
+
+
+.ai-message
+.message-text {
+
+
+    background: #f1f5f2;
+
+
+}
+
+
+.user-message {
+
+
+    flex-direction: row-reverse;
+
+
+}
+
+
+.user-message
+.message-text {
+
+
+    background: #234a8a;
+
+
+    color: white;
+
+
+}
+
+
+.suggestions {
+
+
+    display: flex;
+
+
+    flex-wrap: wrap;
+
+
+    gap: 8px;
+
+
+    padding: 0 20px 15px;
+
+
+}
+
+
+.suggestions button {
+
+
+    border: 1px solid #ddd;
+
+
+    background: white;
+
+
+    padding: 9px 13px;
+
+
+    border-radius: 20px;
+
+
+    cursor: pointer;
+
+
+}
+
+
+.suggestions button:hover {
+
+
+    background: #f1f5f2;
+
+
+}
+
+
+.chat-input-area {
+
+
+    display: flex;
+
+
+    gap: 10px;
+
+
+    padding: 15px 20px;
+
+
+    border-top: 1px solid #eee;
+
+
+}
+
+
+.chat-input-area input {
+
+
+    flex: 1;
+
+
+    padding: 14px;
+
+
+    border: 1px solid #ddd;
+
+
+    border-radius: 12px;
+
+
+    font-size: 16px;
+
+
+    outline: none;
+
+
+}
+
+
+.chat-input-area button {
+
+
+    width: 50px;
+
+
+    border: none;
+
+
+    border-radius: 12px;
+
+
+    background: #234a8a;
+
+
+    color: white;
+
+
+    font-size: 20px;
+
+
+    cursor: pointer;
+
+
+}
+
+
+.back-home {
+
+
+    display: block;
+
+
+    text-align: center;
+
+
+    padding: 15px;
+
+
+    text-decoration: none;
+
+
+}
+
+
